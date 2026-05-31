@@ -252,7 +252,7 @@ Map to calibration tier:
 
 If no USER-PROFILE.md: calibration_tier = "standard"
 
-**Spawn Explore subagent:**
+**Spawn Explore subagent:** — runs in a subagent; no output until it returns (~1–5 min), expected, not a freeze
 
 ```
 Agent(subagent_type="gsd-assumptions-analyzer", prompt="""

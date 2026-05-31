@@ -83,10 +83,17 @@ Plans: 3/5 complete
 
 ## Spawning Indicators
 
-```
-◆ Spawning researcher...
+A subagent runs silently — nothing streams to the user while it works, and a
+research or planning agent can take several minutes to return. Without a
+heads-up, a working subagent is indistinguishable from a frozen session, and
+users kill it mid-run. So every spawn announcement carries a **liveness note**:
+say the work runs in a subagent and that the quiet is expected. The note rides
+on the line that announces the spawn, before the `Agent()` call.
 
-◆ Spawning 4 researchers in parallel...
+```
+◆ Spawning researcher... (runs in a subagent — no output until it returns, ~1–5 min; this is expected, not a freeze)
+
+◆ Spawning 4 researchers in parallel... (each runs in a subagent — no output until they return, ~1–5 min; expected, not a freeze)
   → Stack research
   → Features research
   → Architecture research
@@ -94,6 +101,11 @@ Plans: 3/5 complete
 
 ✓ Researcher complete: STACK.md written
 ```
+
+**Canonical phrase: `runs in a subagent`.** Keep it on (or directly adjacent to)
+the line that announces the spawn. This is the one liveness convention every
+orchestrator shares; the `tests/spawn-liveness-banner.test.cjs` guard enforces
+that every workflow which spawns a subagent carries it.
 
 ---
 

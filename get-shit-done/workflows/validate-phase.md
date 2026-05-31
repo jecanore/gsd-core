@@ -91,7 +91,7 @@ Call AskUserQuestion with gap table and options:
 2. "Skip — mark manual-only" → add to Manual-Only, Step 6
 3. "Cancel" → exit
 
-## 5. Spawn gsd-nyquist-auditor
+## 5. Spawn gsd-nyquist-auditor — runs in a subagent; no output until it returns (~1–5 min), expected, not a freeze
 
 ```
 Agent(

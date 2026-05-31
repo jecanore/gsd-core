@@ -86,6 +86,8 @@ Otherwise: Apply checkpoint-based routing below.
 
 **Checkpoint-based routing (plans with > threshold tasks):**
 
+> Under Patterns A/B the plan runs in a subagent — no output until it returns (~1–5 min); expected, not a freeze.
+
 | Checkpoints | Pattern | Execution |
 |-------------|---------|-----------|
 | None | A (autonomous) | Single subagent: full plan + SUMMARY + commit |

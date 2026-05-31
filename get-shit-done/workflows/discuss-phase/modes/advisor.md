@@ -88,7 +88,7 @@ research agents.
 
 1. Display brief status: `Researching {N} areas...`
 
-2. For EACH user-selected gray area, spawn a `Agent()` in parallel:
+2. For EACH user-selected gray area, spawn a `Agent()` in parallel — each runs in a subagent; no output until they return (~1–5 min), expected, not a freeze:
 
    ```
    Agent(

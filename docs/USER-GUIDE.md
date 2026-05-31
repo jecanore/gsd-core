@@ -1130,6 +1130,14 @@ You ran `/gsd-new-project` but `.planning/PROJECT.md` already exists. This is a 
 
 Clear your context window between major commands: `/clear` in Claude Code. GSD is designed around fresh contexts -- every subagent gets a clean 200K window. If quality is dropping in the main session, clear and use `/gsd-resume-work` or `/gsd-progress` to restore state.
 
+### A Command Looks Frozen After "Spawning..."
+
+It almost certainly isn't. Most GSD commands hand the real work to a **subagent** — a researcher, planner, executor, reviewer, or auditor running in its own clean context. While a subagent works, nothing streams back to your terminal; the next thing you see is its finished result. A research or planning agent can sit silent for **one to five minutes**, sometimes longer on a big phase.
+
+That silence is expected, not a hang. Every spawn announcement now says so inline — e.g. `◆ Spawning researcher... (runs in a subagent — no output until it returns, ~1–5 min; expected, not a freeze)`. Give it the time it asked for before assuming something broke. If you kill it early, you throw away the work in progress and have to start the step over.
+
+It's genuinely stuck only if it sits far past the stated window with no completion message. If that happens, interrupt, `/clear`, and resume with `/gsd-resume-work` or `/gsd-progress`.
+
 ### Plans Seem Wrong or Misaligned
 
 Run `/gsd-discuss-phase [N]` before planning. Most plan quality issues come from Claude making assumptions that `CONTEXT.md` would have prevented. You can also run `/gsd-discuss-phase --assumptions [N]` to see what Claude intends to do before committing to a plan.

@@ -86,7 +86,7 @@ Call AskUserQuestion with threat table and options:
 2. "Accept all open — document in accepted risks log" → add to SECURITY.md accepted risks, set all CLOSED, Step 6
 3. "Cancel" → exit
 
-## 5. Spawn gsd-security-auditor
+## 5. Spawn gsd-security-auditor — runs in a subagent; no output until it returns (~1–5 min), expected, not a freeze
 
 **Auditor constraint — varies by register origin:**
 

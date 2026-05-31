@@ -195,7 +195,7 @@ Write the PLAN.md file to the target directory.
 
 <step name="plan_validate">
 
-Delegate validation to gsd-plan-checker:
+Delegate validation to gsd-plan-checker — runs in a subagent; no output until it returns (~1–5 min), expected, not a freeze:
 
 ```
 Agent({

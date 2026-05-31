@@ -138,7 +138,7 @@ Before spawning agents, detect whether the current runtime supports the `Agent` 
 </step>
 
 <step name="spawn_agents" condition="Agent tool is available">
-Spawn 4 parallel gsd-codebase-mapper agents.
+Spawn 4 parallel gsd-codebase-mapper agents — each runs in a subagent; no output until they return (~1–5 min), expected, not a freeze.
 
 Use Agent tool with `subagent_type="gsd-codebase-mapper"`, `model="{mapper_model}"`, and `run_in_background=true` for parallel execution.
 

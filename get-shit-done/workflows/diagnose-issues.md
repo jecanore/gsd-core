@@ -92,7 +92,7 @@ AGENT_SKILLS_DEBUGGER=$(gsd_run query agent-skills gsd-debugger)
 EXPECTED_BASE=$(git rev-parse HEAD)
 ```
 
-**Spawn debug agents in parallel:**
+**Spawn debug agents in parallel:** — each runs in a subagent; no output until they return (~1–5 min), expected, not a freeze
 
 For each gap, fill the debug-subagent-prompt template and spawn:
 

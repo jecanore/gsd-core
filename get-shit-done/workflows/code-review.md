@@ -439,7 +439,7 @@ if [ -n "$FALLOW_JSON_PATH" ] && [ -f "$FALLOW_JSON_PATH" ]; then
 fi
 ```
 
-Spawn the gsd-code-reviewer agent:
+Spawn the gsd-code-reviewer agent — runs in a subagent; no output until it returns (~1–5 min), expected, not a freeze:
 
 ```
 Agent(subagent_type="gsd-code-reviewer", prompt="

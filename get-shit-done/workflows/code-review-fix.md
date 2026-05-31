@@ -179,7 +179,7 @@ If REVIEW.md contains a `files_reviewed_list` frontmatter field, use that as the
 </step>
 
 <step name="spawn_fixer">
-Spawn the gsd-code-fixer agent with config:
+Spawn the gsd-code-fixer agent with config — runs in a subagent; no output until it returns (~1–5 min), expected, not a freeze:
 
 ```bash
 # Build config for agent

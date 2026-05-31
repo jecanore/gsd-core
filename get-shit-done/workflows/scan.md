@@ -70,7 +70,7 @@ mkdir -p .planning/codebase
 
 ## Step 4: Spawn mapper agent
 
-Spawn a single `gsd-codebase-mapper` agent with the selected focus area:
+Spawn a single `gsd-codebase-mapper` agent with the selected focus area — runs in a subagent; no output until it returns (~1–5 min), expected, not a freeze:
 
 ```
 Agent(

@@ -61,7 +61,7 @@ From each VERIFICATION.md, extract:
 
 If a phase is missing VERIFICATION.md, flag it as "unverified phase" — this is a blocker.
 
-## 3. Spawn Integration Checker
+## 3. Spawn Integration Checker — runs in a subagent; no output until it returns (~1–5 min), expected, not a freeze
 
 With phase context collected:
 
